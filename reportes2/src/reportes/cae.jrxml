@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PolizaHogar" pageWidth="612" pageHeight="792" columnWidth="556" leftMargin="28" rightMargin="28" topMargin="11" bottomMargin="11" uuid="f9b2aeab-5365-459c-a38d-2854fbbee887">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.4641000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="PA_REGISTRO" class="java.lang.String"/>
+	<parameter name="PA_MUT_NOM" class="java.lang.Boolean"/>
+	<parameter name="PA_MUT_DBASIC" class="java.lang.Boolean"/>
+	<parameter name="PA_MUT_CIUU" class="java.lang.Boolean"/>
+	<parameter name="PA_MUT_NOM_TITU" class="java.lang.String"/>
+	<parameter name="PA_MUT_NOM_TEXT" class="java.lang.String"/>
+	<parameter name="PA_MUT_DBASIC_DIR" class="java.lang.String"/>
+	<parameter name="PA_MUT_DBASIC_CODP" class="java.lang.String"/>
+	<parameter name="PA_MUT_DBASIC_CIUD" class="java.lang.String"/>
+	<parameter name="PA_MUT_DBASIC_DEP" class="java.lang.String"/>
+	<parameter name="PA_MUT_DBASIC_BAR" class="java.lang.String"/>
+	<parameter name="PA_MUT_DBASIC_TEL_1" class="java.lang.String"/>
+	<parameter name="PA_MUT_DBASIC_TEL_2" class="java.lang.String"/>
+	<parameter name="PA_MUT_DBASIC_TEL_3" class="java.lang.String"/>
+	<parameter name="PA_NOMBRE_SOLI" class="java.lang.String"/>
+	<parameter name="PA_TIPOIDENT" class="java.lang.String"/>
+	<parameter name="PA_MATRI" class="java.lang.String"/>
+	<parameter name="PA_TEXT_FOOTER" class="java.lang.String"/>
+	<parameter name="PA_MUT_DBASIC_EMAIL" class="java.lang.String"/>
+	<parameter name="PA_MUT_DBASIC_DIR_JU" class="java.lang.String"/>
+	<parameter name="PA_MUT_DBASIC_CODP_JU" class="java.lang.String"/>
+	<parameter name="PA_MUT_DBASIC_CIUD_JU" class="java.lang.String"/>
+	<parameter name="PA_MUT_DBASIC_DEP_JU" class="java.lang.String"/>
+	<parameter name="PA_MUT_DBASIC_BAR_JU" class="java.lang.String"/>
+	<parameter name="PA_MUT_DBASIC_TEL_1_JU" class="java.lang.String"/>
+	<parameter name="PA_MUT_DBASIC_TEL_2_JU" class="java.lang.String"/>
+	<parameter name="PA_MUT_DBASIC_TEL_3_JU" class="java.lang.String"/>
+	<parameter name="PA_MUT_DBASIC_EMAIL_JU" class="java.lang.String"/>
+	<parameter name="PA_MUT_DBASIC_PREG_JU" class="java.lang.String"/>
+	<parameter name="PA_MUT_CIUU_TIP1" class="java.lang.String"/>
+	<parameter name="PA_MUT_CIUU_TIP2" class="java.lang.String"/>
+	<parameter name="PA_MUT_CIUU_TIP3" class="java.lang.String"/>
+	<parameter name="PA_MUT_CIUU_TIP4" class="java.lang.String"/>
+	<parameter name="PA_MUT_CIUU_TEXT" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="56" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="555" height="55" isRemoveLineWhenBlank="true" forecolor="#000000" uuid="3f3810ab-6c12-423b-9d95-3cf73827d7ff"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="13" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PA_REGISTRO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="459" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="0" width="555" height="37" isRemoveLineWhenBlank="true" uuid="6af689eb-e922-43b5-a7f7-aca218a3c70f">
+					<printWhenExpression><![CDATA[$P{PA_MUT_NOM}]]></printWhenExpression>
+				</reportElement>
+				<elementGroup/>
+				<textField>
+					<reportElement x="0" y="15" width="555" height="15" isRemoveLineWhenBlank="true" uuid="27569d67-6576-424a-ae9e-6477248d25c7"/>
+					<textElement>
+						<font fontName="SansSerif" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{PA_MUT_NOM_TEXT}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="1" y="0" width="554" height="15" isRemoveLineWhenBlank="true" uuid="982457df-80d3-4b99-bd57-46d48e032c29"/>
+					<textElement>
+						<font fontName="SansSerif" size="11" isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{PA_MUT_NOM_TITU}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="0" y="37" width="555" height="205" isRemoveLineWhenBlank="true" uuid="6ae77b65-d66b-484f-aae9-791689567771">
+					<printWhenExpression><![CDATA[$P{PA_MUT_DBASIC}]]></printWhenExpression>
+				</reportElement>
+				<staticText>
+					<reportElement x="0" y="0" width="555" height="15" isRemoveLineWhenBlank="true" forecolor="#000000" uuid="c12654eb-261e-4af6-b2b0-8010baff58e5"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="SansSerif" size="11" isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[Nueva información de los Datos Generales: ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="18" width="55" height="15" isRemoveLineWhenBlank="true" forecolor="#000000" uuid="326c6af2-3f1e-4cbe-a60a-fb385b595532"/>
+					<textElement textAlignment="Left" verticalAlignment="Bottom">
+						<font fontName="SansSerif" size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[Dirección: ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="403" y="18" width="73" height="15" isRemoveLineWhenBlank="true" forecolor="#000000" uuid="9303b050-6372-4844-ae53-ad04673f286b"/>
+					<textElement textAlignment="Left" verticalAlignment="Bottom">
+						<font fontName="SansSerif" size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[Código Postal: ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="33" width="100" height="15" isRemoveLineWhenBlank="true" forecolor="#000000" uuid="6e466fb1-5445-4c3d-88b3-5ca105edd2f8"/>
+					<textElement textAlignment="Left" verticalAlignment="Bottom">
+						<font fontName="SansSerif" size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[Ciudad o Municipio: ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="212" y="33" width="74" height="15" isRemoveLineWhenBlank="true" forecolor="#000000" uuid="9d2c29b7-7271-4229-a0bc-784b381b76e0"/>
+					<textElement textAlignment="Left" verticalAlignment="Bottom">
+						<font fontName="SansSerif" size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[Departamento: ]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="55" y="18" width="157" height="15" isRemoveLineWhenBlank="true" uuid="88e3525c-fca3-488e-96a4-97b5715b40c3"/>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="SansSerif" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{PA_MUT_DBASIC_DIR}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="476" y="18" width="79" height="15" isRemoveLineWhenBlank="true" uuid="2103b38e-3ff1-4188-a7f5-099bea47238b"/>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="SansSerif" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{PA_MUT_DBASIC_CODP}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="100" y="33" width="112" height="15" isRemoveLineWhenBlank="true" uuid="e95dcb97-dadb-414c-b7b9-82508fdcba43"/>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="SansSerif" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{PA_MUT_DBASIC_CIUD}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="286" y="33" width="116" height="15" isRemoveLineWhenBlank="true" uuid="a7c925aa-c053-4b65-a562-0545b2a62f81"/>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="SansSerif" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{PA_MUT_DBASIC_DEP}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="403" y="33" width="39" height="15" isRemoveLineWhenBlank="true" forecolor="#000000" uuid="ab42552e-c0bf-4432-89e9-cfadc6a02ed8"/>
+					<textElement textAlignment="Left" verticalAlignment="Bottom">
+						<font fontName="SansSerif" size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[Barrio:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="442" y="33" width="113" height="15" isRemoveLineWhenBlank="true" uuid="7bcbec08-e392-499f-8b5f-a21058f8778c"/>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="SansSerif" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{PA_MUT_DBASIC_BAR}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="48" width="55" height="15" isRemoveLineWhenBlank="true" forecolor="#000000" uuid="d237293b-4aea-472f-aa84-358fcdda0914"/>
+					<textElement textAlignment="Left" verticalAlignment="Bottom">
+						<font fontName="SansSerif" size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[Teléfono 1: ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="212" y="48" width="60" height="15" isRemoveLineWhenBlank="true" forecolor="#000000" uuid="41a2e7c9-446c-405c-b83b-98c54b2c920c"/>
+					<textElement textAlignment="Left" verticalAlignment="Bottom">
+						<font fontName="SansSerif" size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[Teléfono 2: ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="403" y="48" width="64" height="15" isRemoveLineWhenBlank="true" forecolor="#000000" uuid="f714af5d-da86-402c-ab50-977c4c30c02c"/>
+					<textElement textAlignment="Left" verticalAlignment="Bottom">
+						<font fontName="SansSerif" size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[Teléfono 3: ]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="55" y="48" width="157" height="15" isRemoveLineWhenBlank="true" uuid="db232a2d-39f2-43af-9a4f-40d3e45ca334"/>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="SansSerif" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{PA_MUT_DBASIC_TEL_1}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="272" y="48" width="130" height="15" isRemoveLineWhenBlank="true" uuid="47f08ecc-b405-4936-b70b-d1ed14175c80"/>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="SansSerif" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{PA_MUT_DBASIC_TEL_2}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="467" y="48" width="88" height="15" isRemoveLineWhenBlank="true" uuid="fa6cee52-f771-468b-a4ba-6a34eb12822a"/>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="SansSerif" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{PA_MUT_DBASIC_TEL_3}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="212" y="18" width="95" height="15" isRemoveLineWhenBlank="true" forecolor="#000000" uuid="b9cec922-09a8-459f-adf8-d5e8458353b1"/>
+					<textElement textAlignment="Left" verticalAlignment="Bottom">
+						<font fontName="SansSerif" size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[Correo Electrónico: ]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="307" y="18" width="95" height="15" isRemoveLineWhenBlank="true" uuid="dbd50aae-96cd-4264-bad6-f518555a0d3f"/>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="SansSerif" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{PA_MUT_DBASIC_EMAIL}]]></textFieldExpression>
+				</textField>
+				<frame>
+					<reportElement key="" x="0" y="72" width="555" height="133" uuid="b4d0cad4-90ff-4195-9653-0fbeeceed73c">
+						<printWhenExpression><![CDATA[!($P{PA_MUT_DBASIC_DIR_JU}.equals( "" ) && 
+$P{PA_MUT_DBASIC_EMAIL_JU}.equals( "" ) && 
+$P{PA_MUT_DBASIC_CODP_JU}.equals( "" ) && 
+$P{PA_MUT_DBASIC_CIUD_JU}.equals( "" ) && 
+$P{PA_MUT_DBASIC_DEP_JU}.equals( "" ) && 
+$P{PA_MUT_DBASIC_BAR_JU}.equals( "" ) && 
+$P{PA_MUT_DBASIC_TEL_1_JU}.equals( "" ) && 
+$P{PA_MUT_DBASIC_TEL_2_JU}.equals( "" ) && 
+$P{PA_MUT_DBASIC_TEL_3_JU}.equals( "" ) && 
+$P{PA_MUT_DBASIC_PREG_JU}.equals( "" ) )]]></printWhenExpression>
+					</reportElement>
+					<staticText>
+						<reportElement x="0" y="1" width="555" height="15" isRemoveLineWhenBlank="true" forecolor="#000000" uuid="b4674862-1cac-48e4-94be-03f034e7664b"/>
+						<textElement textAlignment="Left" verticalAlignment="Middle">
+							<font fontName="SansSerif" size="11" isBold="true" pdfFontName="Helvetica-Bold"/>
+						</textElement>
+						<text><![CDATA[Nueva información para notificación judicial y administrativa:]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="1" y="22" width="55" height="15" isRemoveLineWhenBlank="true" forecolor="#000000" uuid="91f8341d-6529-4d10-b32a-cbe9a26eafb5"/>
+						<textElement textAlignment="Left" verticalAlignment="Bottom">
+							<font fontName="SansSerif" size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+						</textElement>
+						<text><![CDATA[Dirección: ]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="403" y="22" width="74" height="15" isRemoveLineWhenBlank="true" forecolor="#000000" uuid="1b195f0e-0b14-429a-a876-3f923403b000"/>
+						<textElement textAlignment="Left" verticalAlignment="Bottom">
+							<font fontName="SansSerif" size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+						</textElement>
+						<text><![CDATA[Código Postal: ]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="1" y="39" width="100" height="15" isRemoveLineWhenBlank="true" forecolor="#000000" uuid="3eda3fb9-6224-4810-95ad-b71736b50775"/>
+						<textElement textAlignment="Left" verticalAlignment="Bottom">
+							<font fontName="SansSerif" size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+						</textElement>
+						<text><![CDATA[Ciudad o Municipio: ]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="213" y="39" width="74" height="15" isRemoveLineWhenBlank="true" forecolor="#000000" uuid="6370674e-b5ac-449e-9191-fee88f15ad8e"/>
+						<textElement textAlignment="Left" verticalAlignment="Bottom">
+							<font fontName="SansSerif" size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+						</textElement>
+						<text><![CDATA[Departamento: ]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="403" y="39" width="40" height="15" isRemoveLineWhenBlank="true" forecolor="#000000" uuid="98ecc1e3-20d4-4d33-bfbf-5de37311e905"/>
+						<textElement textAlignment="Left" verticalAlignment="Bottom">
+							<font fontName="SansSerif" size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+						</textElement>
+						<text><![CDATA[Barrio:]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="1" y="54" width="55" height="15" isRemoveLineWhenBlank="true" forecolor="#000000" uuid="5e69111a-9375-4111-bc06-ab2c07f80e38"/>
+						<textElement textAlignment="Left" verticalAlignment="Bottom">
+							<font fontName="SansSerif" size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+						</textElement>
+						<text><![CDATA[Teléfono 1: ]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="212" y="54" width="60" height="15" isRemoveLineWhenBlank="true" forecolor="#000000" uuid="391a6baf-f756-4bd0-9099-11b6b83e8546"/>
+						<textElement textAlignment="Left" verticalAlignment="Bottom">
+							<font fontName="SansSerif" size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+						</textElement>
+						<text><![CDATA[Teléfono 2: ]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="403" y="54" width="64" height="15" isRemoveLineWhenBlank="true" forecolor="#000000" uuid="e143caf5-6a3b-4b7c-b6b4-ebcc43d3c88f"/>
+						<textElement textAlignment="Left" verticalAlignment="Bottom">
+							<font fontName="SansSerif" size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+						</textElement>
+						<text><![CDATA[Teléfono 3: ]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="213" y="22" width="95" height="15" isRemoveLineWhenBlank="true" forecolor="#000000" uuid="dc0978f8-93f7-48e2-95bb-995fd94509b5"/>
+						<textElement textAlignment="Left" verticalAlignment="Bottom">
+							<font fontName="SansSerif" size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+						</textElement>
+						<text><![CDATA[Correo Electrónico: ]]></text>
+					</staticText>
+					<textField>
+						<reportElement x="56" y="22" width="157" height="15" isRemoveLineWhenBlank="true" uuid="ce79cb1d-5618-4ae7-97b0-35cea67f09a0"/>
+						<textElement verticalAlignment="Bottom">
+							<font fontName="SansSerif" size="10"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{PA_MUT_DBASIC_DIR_JU}]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="477" y="22" width="78" height="15" isRemoveLineWhenBlank="true" uuid="90c65be4-f5c6-4558-8241-4077b4bb2fdf"/>
+						<textElement verticalAlignment="Bottom">
+							<font fontName="SansSerif" size="10"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{PA_MUT_DBASIC_CODP_JU}]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="101" y="39" width="112" height="15" isRemoveLineWhenBlank="true" uuid="957aab78-d605-4cfa-9758-23a5c9d7e7da"/>
+						<textElement verticalAlignment="Bottom">
+							<font fontName="SansSerif" size="10"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{PA_MUT_DBASIC_CIUD_JU}]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="287" y="39" width="116" height="15" isRemoveLineWhenBlank="true" uuid="1295853b-99ae-4ae7-a5df-2a037c05015e"/>
+						<textElement verticalAlignment="Bottom">
+							<font fontName="SansSerif" size="10"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{PA_MUT_DBASIC_DEP_JU}]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="443" y="39" width="112" height="15" isRemoveLineWhenBlank="true" uuid="698accf1-e315-4472-bd85-ec8a7cb4dca7"/>
+						<textElement verticalAlignment="Bottom">
+							<font fontName="SansSerif" size="10"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{PA_MUT_DBASIC_BAR_JU}]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="55" y="54" width="157" height="15" isRemoveLineWhenBlank="true" uuid="b5f99e7a-b744-4961-9b2b-6623ca13f436"/>
+						<textElement verticalAlignment="Bottom">
+							<font fontName="SansSerif" size="10"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{PA_MUT_DBASIC_TEL_1_JU}]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="272" y="54" width="130" height="15" isRemoveLineWhenBlank="true" uuid="32abc43f-ffd5-4cdc-8ed7-152ccb8854e2"/>
+						<textElement verticalAlignment="Bottom">
+							<font fontName="SansSerif" size="10"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{PA_MUT_DBASIC_TEL_2_JU}]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="467" y="54" width="88" height="15" isRemoveLineWhenBlank="true" uuid="28e3718d-9515-42e8-badb-138c147aedae"/>
+						<textElement verticalAlignment="Bottom">
+							<font fontName="SansSerif" size="10"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{PA_MUT_DBASIC_TEL_3_JU}]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="308" y="22" width="96" height="15" isRemoveLineWhenBlank="true" uuid="3c9c5a3a-5e18-4ce9-acec-594114839724"/>
+						<textElement verticalAlignment="Bottom">
+							<font fontName="SansSerif" size="10"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{PA_MUT_DBASIC_EMAIL_JU}]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="1" y="82" width="554" height="48" isRemoveLineWhenBlank="true" uuid="5cf0c808-80b8-43ce-810e-89ec32d6e4b1"/>
+						<textElement textAlignment="Justified" verticalAlignment="Bottom">
+							<font fontName="SansSerif" size="10"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{PA_MUT_DBASIC_PREG_JU}]]></textFieldExpression>
+					</textField>
+				</frame>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="139" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<image>
+				<reportElement x="426" y="0" width="139" height="54" uuid="9ae99c6f-d5b6-4cfe-8f60-8f145da25785"/>
+				<imageExpression><![CDATA["logo1.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="0" y="13" width="116" height="20" uuid="d0e39b80-2f66-4f49-9555-42c0556f4385"/>
+				<imageExpression><![CDATA["logo2.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+</jasperReport>
